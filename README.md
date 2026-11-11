@@ -71,26 +71,6 @@ dotfiles/
 └── readme.md
 ```
 
-## Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git
-cd dotfiles
-```
-
-### 2. Back up existing configurations
-
-```bash
-mkdir -p ~/.config-backup
-
-cp -r ~/.config/niri ~/.config-backup/ 2>/dev/null || true
-cp -r ~/.config/kitty ~/.config-backup/ 2>/dev/null || true
-cp -r ~/.config/cava ~/.config-backup/ 2>/dev/null || true
-cp -r ~/.config/mpd ~/.config-backup/ 2>/dev/null || true
-cp -r ~/.config/mpv ~/.config-backup/ 2>/dev/null || true
-```
 
 ### 3. Apply configurations
 
