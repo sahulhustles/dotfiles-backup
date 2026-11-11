@@ -1,0 +1,27 @@
+{
+  "Applications": {
+    "/usr/share/applications/awcc.desktop": 1,
+    "/usr/share/applications/brave-browser.desktop": 5,
+    "/usr/share/applications/java-25-openjdk-jconsole.desktop": 1,
+    "/usr/share/applications/org.gnome.ColorProfileViewer.desktop": 1,
+    "/usr/share/applications/org.gnome.Nautilus.desktop": 6,
+    "/usr/share/applications/org.gnome.Snapshot.desktop": 2,
+    "/usr/share/applications/org.gnome.Software.desktop": 5,
+    "/usr/share/applications/org.gnome.SystemMonitor.desktop": 11,
+    "/usr/share/applications/org.gnome.clocks.desktop": 1,
+    "/usr/share/applications/org.mozilla.firefox.desktop": 6,
+    "/usr/share/applications/org.qbittorrent.qBittorrent.desktop": 2,
+    "/usr/share/applications/proton.vpn.app.gtk.desktop": 6,
+    "/usr/share/applications/qimgv.desktop": 2,
+    "/usr/share/applications/vlc.desktop": 4,
+    "/var/lib/flatpak/exports/share/applications/com.obsproject.Studio.desktop": 5,
+    "/var/lib/flatpak/exports/share/applications/com.protonvpn.www.desktop": 1,
+    "/var/lib/flatpak/exports/share/applications/com.spotify.Client.desktop": 22,
+    "/var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop": 17,
+    "/var/lib/flatpak/exports/share/applications/io.github.peazip.PeaZip.desktop": 1,
+    "/var/lib/flatpak/exports/share/applications/org.localsend.localsend_app.desktop": 7
+  },
+  "Emoji": {
+    "emoji-😅": 1
+  }
+}

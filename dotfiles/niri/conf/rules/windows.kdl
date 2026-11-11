@@ -1,0 +1,26 @@
+// Window rules. Docs: https://niri-wm.github.io/niri/Configuration:-Window-Rules
+
+// Work around WezTerm's initial configure bug.
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Firefox picture-in-picture opens floating (host + Flatpak).
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Example: hide password managers from screen capture (disabled).
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+// Example: rounded corners for all windows (disabled).
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

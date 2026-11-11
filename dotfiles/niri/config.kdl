@@ -1,0 +1,22 @@
+// niri entry point. Everything lives in conf/. Docs: https://niri-wm.github.io/niri/
+include "conf/input.kdl"
+include "conf/outputs.kdl"
+include "conf/layout.kdl"
+include "conf/appearance.kdl"
+include "conf/animations.kdl"
+include "conf/startup.kdl"
+include "conf/noctalia.kdl"
+include "conf/rules/windows.kdl"
+include "conf/rules/layers.kdl"
+include "conf/binds/apps.kdl"
+include "conf/binds/media.kdl"
+include "conf/binds/focus.kdl"
+include "conf/binds/move.kdl"
+include "conf/binds/monitors.kdl"
+include "conf/binds/workspaces.kdl"
+include "conf/binds/sizing.kdl"
+include "conf/binds/screenshots.kdl"
+include "conf/binds/session.kdl"
+hotkey-overlay {
+    hide-not-bound
+}

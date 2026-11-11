@@ -1,0 +1,26 @@
+// Apps, launcher and lock. Noctalia IPC reference: https://docs.noctalia.dev/noctalia/ipc/
+// Run `noctalia msg --help` to list every command on your installed version.
+binds {
+    Mod+Shift+Period hotkey-overlay-title="Open Guide Image — Qimgv" {
+    spawn "qimgv" "/home/steve/Documents/guide.png";
+}
+    Mod+Space hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+
+    // Launcher: Noctalia panel (old: fuzzel)
+    Mod+D hotkey-overlay-title="Run an Application: Noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+
+    // Lock: Noctalia lock screen (old: swaylock)
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: Noctalia" { spawn-sh "noctalia msg session lock"; }
+    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    // Toggle screen reader
+    //Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+
+    // Optional extras (uncomment to use; these keys are free in your config):
+    Mod+S hotkey-overlay-title="Noctalia Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+O hotkey-overlay-title="Power Menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+B hotkey-overlay-title="Open Browser - Brave" { spawn "brave-browser"; }
+    Mod+E hotkey-overlay-title="Open File Manager" { spawn "nautilus"; }
+    Mod+V hotkey-overlay-title="Clipboard History" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+}

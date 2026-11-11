@@ -1,0 +1,3 @@
+// Noctalia shell (bar, launcher, lock, OSD). Its own state is in ~/.config/noctalia/settings.toml
+spawn-at-startup "noctalia"
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

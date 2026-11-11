@@ -1,0 +1,10 @@
+// Outputs. Run `niri msg outputs` inside niri to see names/modes.
+// Docs: https://niri-wm.github.io/niri/Configuration:-Outputs
+// Disabled with "/-": remove it to enable. Niri then auto-picks the mode.
+/-output "eDP-1" {
+    // off
+    mode "1920x1080@120.030"
+    scale 2
+    transform "normal"
+    position x=1280 y=0
+}

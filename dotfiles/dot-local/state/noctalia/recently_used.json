@@ -1,0 +1,27 @@
+{
+  "Applications": [
+    "/var/lib/flatpak/exports/share/applications/com.spotify.Client.desktop",
+    "/var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop",
+    "/usr/share/applications/brave-browser.desktop",
+    "/usr/share/applications/org.gnome.Nautilus.desktop",
+    "/usr/share/applications/org.mozilla.firefox.desktop",
+    "/usr/share/applications/org.gnome.SystemMonitor.desktop",
+    "/usr/share/applications/org.gnome.Snapshot.desktop",
+    "/usr/share/applications/org.gnome.Software.desktop",
+    "/usr/share/applications/vlc.desktop",
+    "/usr/share/applications/org.gnome.clocks.desktop",
+    "/var/lib/flatpak/exports/share/applications/org.localsend.localsend_app.desktop",
+    "/var/lib/flatpak/exports/share/applications/io.github.peazip.PeaZip.desktop",
+    "/var/lib/flatpak/exports/share/applications/com.obsproject.Studio.desktop",
+    "/usr/share/applications/qimgv.desktop",
+    "/usr/share/applications/org.gnome.ColorProfileViewer.desktop",
+    "/usr/share/applications/org.qbittorrent.qBittorrent.desktop",
+    "/var/lib/flatpak/exports/share/applications/com.protonvpn.www.desktop",
+    "/usr/share/applications/proton.vpn.app.gtk.desktop",
+    "/usr/share/applications/awcc.desktop",
+    "/usr/share/applications/java-25-openjdk-jconsole.desktop"
+  ],
+  "Emoji": [
+    "emoji-😅"
+  ]
+}

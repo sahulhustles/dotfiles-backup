@@ -1,0 +1,28 @@
+// Window placement and sizing. Docs: https://niri-wm.github.io/niri/Configuration:-Layout
+layout {
+    gaps 16
+
+    // "never" | "always" | "on-overflow"
+    center-focused-column "never"
+
+    // Widths cycled by Mod+R
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        // fixed 1920
+    }
+
+    // preset-window-heights { }
+
+    default-column-width { proportion 0.5; }
+    // default-column-width {}
+
+    // Struts shrink the usable area (like outer gaps), in logical pixels.
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}

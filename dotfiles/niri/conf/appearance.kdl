@@ -1,0 +1,34 @@
+// Looks: focus ring, border, shadow. (Layout-related options live in layout.kdl.)
+// niri merges multiple `layout { }` blocks, so these extend layout.kdl.
+layout {
+    focus-ring {
+        // off
+        width 4
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+
+    border {
+        off
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // inactive-gradient from="#505050" to="#808080" angle=45
+    }
+
+    shadow {
+        // on
+        // draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+}
+
+// Ask clients to omit client-side decorations (restart apps after changing).
+// prefer-no-csd

@@ -1,0 +1,30 @@
+binds {
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-column-width-back; }
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    // Maximize to screen edges (no gaps/borders)
+    Mod+M { maximize-window-to-edges; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Mod+N     { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Tabbed column display
+    Mod+W { toggle-column-tabbed-display; }
+
+    // Layout switching (don't enable if xkb options already bind it):
+    // Mod+Space       { switch-layout "next"; }
+    // Mod+Shift+Space { switch-layout "prev"; }
+}
