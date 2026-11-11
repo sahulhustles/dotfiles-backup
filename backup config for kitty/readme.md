@@ -8,7 +8,12 @@ Built around a clean, minimal, and functional desktop experience.
 
 ## Desktop
 
-![Desktop Preview](assets/desktop.png)
+![Desktop Preview](assets/screenshot1.png)
+![Desktop Preview](assets/screenshot2.png)
+![Desktop Preview](assets/screenshot3.png)
+![Desktop Preview](assets/screenshot4.png)
+![Desktop Preview](assets/screenshot5.png)
+![Desktop Preview](assets/screenshot6.png)
 
 > Replace the image above with your own desktop screenshot. Put it inside an `assets/` directory.
 
@@ -43,6 +48,8 @@ Built around a clean, minimal, and functional desktop experience.
 │   └── ...
 ├── kitty/
 │   └── kitty.conf
+├── assets/
+│   └── all screenshots
 └── README.md
 ```
 
