@@ -4,7 +4,7 @@
 # Dotfiles Installation Script
 # 
 # 1. Installs Niri window manager first
-# 2. Installs additional applications: kitty, cava, mpv, mpd
+# 2. Installs additional applications: kitty, cava, vlc, mpd
 # 3. Places all folders inside dotfiles/.config into ~/.config/
 # 4. Places all folders inside dotfiles/.local into ~/.local/
 # 5. Creates required runtime directories (MPD state/playlists, screenshots, etc.)
@@ -123,12 +123,12 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# Step 2: Install Additional Software (kitty, cava, mpv, mpd)
+# Step 2: Install Additional Software (kitty, cava, vlc, mpd)
 # -----------------------------------------------------------------------------
 echo ""
-log_info "${BOLD}Step 2: Installing kitty, cava, mpv, and mpd...${NC}"
+log_info "${BOLD}Step 2: Installing kitty, cava, vlc, and mpd...${NC}"
 
-PACKAGES=("kitty" "cava" "mpv" "mpd")
+PACKAGES=("kitty" "cava" "vlc" "mpd")
 
 for pkg in "${PACKAGES[@]}"; do
     if command -v "${pkg}" &>/dev/null; then
@@ -192,6 +192,30 @@ if [[ -d "${LOCAL_SRC}" ]]; then
         cp -r "${item}/." "${dest}/"
         log_success "Installed: ~/.local/${folder_name}"
     done
+fi
+
+# Ensure settings.toml is placed in both ~/.config/noctalia and ~/.local/state/noctalia
+log_info "Ensuring Noctalia settings.toml is placed in required locations..."
+mkdir -p "${TARGET_CONFIG}/noctalia"
+mkdir -p "${TARGET_LOCAL}/state/noctalia"
+
+SETTINGS_SRC=""
+if [[ -f "${CONFIG_SRC}/noctalia/settings.toml" ]]; then
+    SETTINGS_SRC="${CONFIG_SRC}/noctalia/settings.toml"
+elif [[ -f "${LOCAL_SRC}/state/noctalia/settings.toml" ]]; then
+    SETTINGS_SRC="${LOCAL_SRC}/state/noctalia/settings.toml"
+fi
+
+if [[ -n "${SETTINGS_SRC}" ]]; then
+    backup_target "${TARGET_CONFIG}/noctalia/settings.toml"
+    cp "${SETTINGS_SRC}" "${TARGET_CONFIG}/noctalia/settings.toml"
+    log_success "Placed: ~/.config/noctalia/settings.toml"
+
+    backup_target "${TARGET_LOCAL}/state/noctalia/settings.toml"
+    cp "${SETTINGS_SRC}" "${TARGET_LOCAL}/state/noctalia/settings.toml"
+    log_success "Placed: ~/.local/state/noctalia/settings.toml"
+else
+    log_warn "settings.toml not found in source dotfiles!"
 fi
 
 # -----------------------------------------------------------------------------

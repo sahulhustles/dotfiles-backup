@@ -45,42 +45,50 @@ A glimpse into my desktop environment.
 | Terminal Emulator | [Kitty](https://github.com/kovidgoyal/kitty) |
 | Visualizer | [CAVA](https://github.com/karlstav/cava) |
 | Music Player Daemon | MPD |
-| Media Player | MPV |
+| Media Player | [VLC](https://www.videolan.org/vlc/) |
 | GPU | NVIDIA GeForce RTX 3050 |
 
 ## Repository Structure
 
 ```text
-dotfiles/
-│
-├── cava/           # Audio visualizer configuration
-├── dot-local/      # Local user configurations
-├── kitty/          # Terminal configuration
-├── mpd/            # Music Player Daemon configuration
-├── mpv/            # Media player configuration
-├── niri/           # Niri window manager configuration
-│
-├── screenshots/    # Desktop screenshots
-│   ├── screenshot1.png
-│   ├── screenshot2.png
-│   ├── screenshot3.png
-│   ├── screenshot4.png
-│   ├── screenshot5.png
-│   └── screenshot6.png
-│
-└── readme.md
+dotfiles-backup/
+├── install.sh         # Automated installer script
+├── README.md
+└── dotfiles/
+    ├── .config/
+    │   ├── cava/      # Audio visualizer configuration & shaders
+    │   ├── kitty/     # Terminal configuration
+    │   ├── mpd/       # Music Player Daemon configuration
+    │   ├── niri/      # Niri window manager modular configuration
+    │   ├── noctalia/  # Noctalia shell configuration (settings.toml)
+    │   └── screenshots/
+    └── .local/
+        └── state/
+            └── noctalia/ # Noctalia runtime state and settings
 ```
 
+## Quick Start / Installation
 
-### 3. Apply configurations
+Run the automated installer script:
 
-Review the repository directories and copy the relevant configurations into their corresponding locations under `~/.config/` and `~/.local/`.
+```bash
+git clone https://github.com/sahulhustles/dotfiles-backup.git
+cd dotfiles-backup
+chmod +x install.sh
+./install.sh
+```
 
-Avoid blindly copying directories if you already have existing configurations.
+The script will:
+1. Install **Niri** window manager first.
+2. Install **Kitty**, **CAVA**, **VLC**, and **MPD**.
+3. Place all configurations from `dotfiles/.config/` into `~/.config/`.
+4. Ensure `settings.toml` is placed in both `~/.config/noctalia/` and `~/.local/state/noctalia/`.
+5. Safely back up any existing configurations before deploying.
+6. Initialize runtime directories (`~/Music`, `~/.local/share/mpd/playlists`, `~/Pictures/Screenshots`).
 
-### 4. Restart your session
+### Restart your session
 
-Log out and select Niri from your display manager to apply the window manager configuration.
+Log out and select **Niri** from your display manager (GDM/SDDM) to enter your new desktop.
 
 ## Dependencies
 
@@ -92,9 +100,7 @@ The following software is used in this setup:
 - Kitty
 - CAVA
 - MPD
-- MPV
-
-Install the components you need before applying their respective configurations.
+- VLC
 
 ## Credits
 
@@ -105,7 +111,7 @@ A few projects that make this setup possible:
 - [Kitty](https://github.com/kovidgoyal/kitty)
 - [CAVA](https://github.com/karlstav/cava)
 - [MPD](https://www.musicpd.org/)
-- [MPV](https://mpv.io/)
+- [VLC](https://www.videolan.org/vlc/)
 
 ---
 
